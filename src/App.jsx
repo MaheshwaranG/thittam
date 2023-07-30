@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hey Learn github actions </h1>
+      <h1>This is simple app using React Js</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
