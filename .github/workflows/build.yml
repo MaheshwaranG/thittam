@@ -1,0 +1,31 @@
+name: React Build CI
+run-name: ${{ github.actor }} started build
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install dependencies
+        run: npm install
+
+      - name: build react js files
+        rum: npm run build --if-present
+
+      - name: build complete
