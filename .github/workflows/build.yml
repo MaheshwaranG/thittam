@@ -26,6 +26,7 @@ jobs:
         run: npm install
 
       - name: build react js files
-        rum: npm run build --if-present
+        run: npm run build --if-present
 
       - name: build complete
+        run: echo "$USER"
