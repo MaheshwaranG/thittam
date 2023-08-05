@@ -12,7 +12,8 @@ jobs:
     runs-on: self-hosted
     environment: dev
     env:
-      VITE_ASSET_URI: ${{ vars.VITE_ASSET_URI }}
+      # VITE_ASSET_URI: ${{ vars.VITE_ASSET_URI }}
+      VITE_ASSET_URI: build-${{ github.run_id }}
 
     steps:
       - name: code checkout
