@@ -38,3 +38,6 @@ jobs:
 
       - name: build complete
         run: echo "$USER"
+
+      - name: move to server static directory
+        run: cp -R ${{ env.VITE_ASSET_URI }} ${{ vars.SERVER_STATIC_PATH }}
