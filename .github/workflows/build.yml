@@ -13,7 +13,7 @@ jobs:
     environment: dev
     env:
       # VITE_ASSET_URI: ${{ vars.VITE_ASSET_URI }}
-      VITE_ASSET_URI: build-${{ github.run_id }}
+      VITE_ASSET_URI: ./build-${{ github.run_number }}
 
     steps:
       - name: code checkout
