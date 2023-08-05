@@ -24,10 +24,11 @@ jobs:
         run: npm install
 
       - name: Check environment variables validation
-        run: echo $PWD >> build.txt; echo "mahesh" >> build.txt; echo "${{secrets.ACCESS_TOKEN }}" >> build.txt;
+        run: |
+          echo $PWD >> build.txt; echo "mahesh" >> build.txt; echo "${{secrets.ACCESS_TOKEN }}" >> build.txt;
 
       - name: Create .env files
-        run: echo "${{ env }}" >> .env;
+        run: echo "${{ env.DEV_ENV }}" >> .env;
 
       - name: build react js files
         run: npm run build --if-present
