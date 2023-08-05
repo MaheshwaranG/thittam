@@ -2,8 +2,8 @@ name: React Build CI
 run-name: ${{ github.actor }} started build
 
 on:
-  push:
-    branches: [master, main]
+  # push:
+  #   branches: [master, main]
   pull_request:
     branches: [master, main]
 
