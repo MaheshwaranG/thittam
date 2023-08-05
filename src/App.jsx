@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>This is simple app using React Js</h1>
+      <h1>Lets Update to check PR deploy from source branch</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
