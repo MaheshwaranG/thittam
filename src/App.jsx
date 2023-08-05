@@ -7,7 +7,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Lets Update to check PR deploy from source branch</h1>
+      <h1>
+        Hellow without any specific types on pull_request it was working on
+        commit while PR active
+      </h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
