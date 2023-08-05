@@ -11,8 +11,6 @@ jobs:
   build:
     runs-on: self-hosted
     environment: dev
-    env:
-      VITE_ASSET_URI: "./build-test02/"
     steps:
       - name: code checkout
         uses: actions/checkout@v3
