@@ -3,9 +3,7 @@ run-name: ${{github.actor}} started build
 
 on:
   push:
-    branches:
-      - main
-      - onboard*
+    branches: []
 
 jobs:
   build:

@@ -11,6 +11,9 @@ jobs:
   build:
     runs-on: self-hosted
     environment: dev
+    env:
+      VITE_ASSET_URI: ${{ vars.DEV_ENV }}
+
     steps:
       - name: code checkout
         uses: actions/checkout@v3
@@ -27,8 +30,8 @@ jobs:
         run: |
           echo $PWD >> build.txt; echo "mahesh" >> build.txt; echo "${{secrets.ACCESS_TOKEN }}" >> build.txt;
 
-      - name: Create .env files
-        run: echo "${{ vars.DEV_ENV }}" >> .env;
+      # - name: Create .env files
+      #   run: echo "${{ vars.DEV_ENV }}" >> .env; // this was not worked because creating file using echo and redirection are not recognized as proper file
 
       - name: build react js files
         run: npm run build --if-present
