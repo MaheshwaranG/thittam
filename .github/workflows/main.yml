@@ -4,9 +4,9 @@ run-name: ${{github.actor}} started build
 on:
   push:
     branches: []
-
 jobs:
   build:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
