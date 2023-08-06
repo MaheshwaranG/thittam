@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hey santhosh we done with CI CD pipeline</h1>
+      <h1>Lets create new PR.</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
