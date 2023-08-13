@@ -19,11 +19,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
-  const ASSET_URI = env.VITE_ASSET_URI || "./dist/";
+  const ASSET_URI = env.VITE_ASSET_URI || "dist/";
   console.log(ASSET_URI);
   return {
     plugins: [react()],
-    base: [...ASSET_URI].slice(1).join(""),
+    base: ASSET_URI,
     build: {
       outDir: ASSET_URI,
     },
